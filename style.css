@@ -1,5 +1,11 @@
 /* General */
 
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #181719;
@@ -9,6 +15,11 @@ body {
 h1,
 h3 {
   font-family: "Lora", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 nav li {
@@ -32,6 +43,14 @@ img {
   line-height: 1.1;
 }
 
+header {
+  margin: 2em 0;
+}
+
+nav ul {
+  display: none;
+}
+
 nav a {
   font-weight: 500;
   font-size: 1.125rem;
@@ -45,7 +64,7 @@ nav a:active {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   line-height: 1.125;
   font-weight: 500;
 }
@@ -60,7 +79,7 @@ h1 {
   font-weight: 400;
 }
 
-.container a {
+.container .description a {
   font-weight: 700;
 }
 
@@ -85,7 +104,8 @@ h1 {
   font-family: "Lora", sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
-  line-height: 1.1;
+  line-height: 1.5;
+  margin: 1em;
 }
 
 footer p {
@@ -99,11 +119,142 @@ footer .username {
   text-decoration: underline;
 }
 
+.logo {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  padding: 1em;
+}
+
 /* Layout */
 .container {
-  max-width: 920px;
+  max-width: 90%;
   width: 90%;
   margin: 0 auto;
 }
 
+.active {
+  border-bottom: 1px solid white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  padding: 1.5em 0;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.description h1 {
+  margin-bottom: 1em;
+}
+
+.card {
+  position: relative;
+  bottom: 3.5em;
+  z-index: 999;
+  width: 70%;
+  background-color: #181719;
+  padding: 1em;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  border-radius: 50%;
+  width: 15%;
+  height: 15%;
+  margin: 0 1em;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.description p {
+  width: 75%;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0%;
+  margin-bottom: 1.1em;
+}
+
+footer p {
+  text-align: center;
+  padding: 2em;
+}
+
+.hide {
+  display: block;
+}
+
 /* Button */
+
+/* Media Query */
+@media (min-width: 650px) {
+  /* Typography */
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .description p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .description {
+    margin-top: -12em;
+    width: 50%;
+  }
+
+  .description a {
+    font-size: 1.2rem;
+  }
+
+  .read-more-arrow {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  /* Layout */
+
+  .hide {
+    display: none;
+  }
+
+  .portfolio {
+    width: 50%;
+  }
+
+  .card {
+    width: 50%;
+    left: 6em;
+    bottom: 4em;
+  }
+  nav {
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  nav li {
+    display: block;
+    margin: 0 3em;
+    transition: all 0.5s;
+  }
+
+  nav li a {
+    display: inline-block;
+    padding-bottom: 0.5em;
+  }
+}

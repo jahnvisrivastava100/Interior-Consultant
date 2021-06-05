@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Interior Consultant</title>
-</head>
-<body class="container">
+  </head>
+  <body class="container">
     <header>
       <nav>
-          <div class="logo">
-              <a href=""> THIS INTERIOR</a>
-          </div>
-          <div class="links">
-              <ul>
-                  <li><a href="">Home</a>  </li>
-                  <li><a href="">Collection</a></li>
-                  <li><a href="">About</a></li>
-                  <li><a href="">Contact</a></li>
-              </ul>
-          </div>
+        <div>
+          <a class="logo" href="#"> THIS INTERIOR</a>
+        </div>
+        <ul>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="">Collection</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        
+        <svg class="hide" id="open-nav" height="32px" id="menu-btn" class="open" viewBox="0 0 32 32">
+          <path
+            fill="white"
+            d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+          />
+        </svg>
       </nav>
     </header>
 
@@ -38,16 +46,21 @@
         <a href="#">Read more <span class="read-more-arrow">&#x2192</span></a>
       </section>
 
-      <section class="work">
-        <img src="./photo1.png" alt="interior art">
+      <section class="portfolio">
+        <img class="portfolio-artwork" src="./photo1.png" alt="interior art" />
         <div class="card">
           <div class="profile">
-            <img src="photo2.png" alt="profile-pic">
-            <h3>Aliza Weber</h3>
-            <p class="designation">Interior Design</p>
+            <img src="photo2.png" alt="profile-pic" />
+            <div class="profile-content">
+              <h3>Aliza Weber</h3>
+              <p class="designation">Interior Design</p>
+            </div>
           </div>
           <div class="profile-title">
-            <h2>Designed in 2020 by Aliza Webber</h2>
+            <h2>Designed in 2020 by
+              <br/> 
+              Aliza Webber
+            </h2>
           </div>
         </div>
       </section>
@@ -58,5 +71,5 @@
         created by <span class="username">username</span> - devChallenges.io
       </p>
     </footer>
-</body>
+  </body>
 </html>
