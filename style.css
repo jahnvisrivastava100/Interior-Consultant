@@ -30,10 +30,6 @@ img {
   max-width: 100%;
 }
 
-nav {
-  display: none;
-}
-
 /* Typography */
 .logo {
   font-family: "Crimson Pro", sans-serif;
@@ -44,6 +40,10 @@ nav {
 
 header {
   margin: 2em 0;
+}
+
+nav li {
+  display: none;
 }
 
 nav a {
@@ -127,6 +127,10 @@ footer .username {
   margin: 0 auto;
 }
 
+.active {
+  border-bottom: 1px solid white;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -182,7 +186,62 @@ footer p {
 
 /* Media Query */
 @media (min-width: 650px) {
+  /* Typography */
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .description p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
   main {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .description {
+    margin-top: -12em;
+    width: 50%;
+  }
+
+  .description a {
+    font-size: 1.2rem;
+  }
+
+  .read-more-arrow {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  /* Layout */
+
+  .portfolio {
+    width: 50%;
+  }
+
+  .card {
+    width: 50%;
+    left: 6em;
+    bottom: 4em;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav li {
+    margin: 0 3em;
+    transition: all 0.5s;
+  }
+
+  nav li a {
+    display: inline-block;
+    padding-bottom: 0.5em;
   }
 }
