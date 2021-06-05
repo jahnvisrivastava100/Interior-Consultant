@@ -17,6 +17,11 @@ h3 {
   font-family: "Lora", sans-serif;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav li {
   list-style-type: none;
 }
@@ -42,7 +47,7 @@ header {
   margin: 2em 0;
 }
 
-nav li {
+nav ul {
   display: none;
 }
 
@@ -182,6 +187,10 @@ footer p {
   padding: 2em;
 }
 
+.hide {
+  display: block;
+}
+
 /* Button */
 
 /* Media Query */
@@ -218,6 +227,10 @@ footer p {
 
   /* Layout */
 
+  .hide {
+    display: none;
+  }
+
   .portfolio {
     width: 50%;
   }
@@ -228,14 +241,14 @@ footer p {
     bottom: 4em;
   }
   nav {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
   }
   nav ul {
     display: flex;
+    flex-direction: row;
   }
   nav li {
+    display: block;
     margin: 0 3em;
     transition: all 0.5s;
   }
