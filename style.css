@@ -20,6 +20,58 @@ h3 {
 nav {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+nav .nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  /* margin-top: 1.25em; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* .nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+} */
+
+/* .nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+} */
+
+.nav-toggle:checked ~ ul {
+  background-color: #181719;
+  display: block;
+  z-index: 1111;
+  text-align: center;
+  padding: 0;
+  height: 100vh;
+  margin: 12em 0 0 0;
+}
+
+.nav-toggle:checked ~ ul li {
+  z-index: 1111;
+  margin: 1.5em 0;
 }
 
 nav li {
@@ -36,6 +88,7 @@ img {
 }
 
 /* Typography */
+
 .logo {
   font-family: "Crimson Pro", sans-serif;
   font-weight: 200;
@@ -49,12 +102,6 @@ header {
 
 nav ul {
   display: none;
-}
-
-nav a {
-  font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.1;
 }
 
 nav a:hover,
@@ -77,6 +124,12 @@ h1 {
 
 .container p {
   font-weight: 400;
+}
+
+.container nav a {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.1;
 }
 
 .container .description a {
@@ -124,31 +177,16 @@ footer .username {
   border: 1px solid #ffffff;
   padding: 1em;
 }
-/*navbar*/
-.nav-toggle{
-  display:none;
-}
-.nav-toggle:checked ~ul{
-  display:block;
-  height:100vh;
-  text-align: center;
-  margin-top:60%;
-  margin-right:30%;
-  justify-content: space-between;
-  
 
-}
-.nav-toggle:checked ~ ul li{
-  padding-bottom:2em;
-}
 /* Layout */
+
 .container {
   max-width: 90%;
   width: 90%;
   margin: 0 auto;
 }
 
-.active {
+.container .active {
   border-bottom: 1px solid white;
 }
 
@@ -210,47 +248,36 @@ footer p {
 /* Button */
 
 /* Media Query */
+
 @media (min-width: 650px) {
   /* Typography */
   h1 {
     font-size: 3.5rem;
   }
-
   .description p {
     font-size: 1.5rem;
     line-height: 1.5;
   }
-
   main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-
   .description {
     margin-top: -12em;
     width: 50%;
   }
-
   .description a {
     font-size: 1.2rem;
   }
-
   .read-more-arrow {
     font-size: 2rem;
     font-weight: 700;
   }
-
   /* Layout */
-
-  .hide {
-    display: none;
-  }
-
   .portfolio {
     width: 50%;
   }
-
   .card {
     width: 50%;
     left: 6em;
@@ -268,9 +295,14 @@ footer p {
     margin: 0 3em;
     transition: all 0.5s;
   }
-
-  nav li a {
+  .container nav li a {
+    font-size: 1rem;
     display: inline-block;
     padding-bottom: 0.5em;
+  }
+
+  nav .nav-toggle,
+  .nav-toggle-label {
+    display: none;
   }
 }
