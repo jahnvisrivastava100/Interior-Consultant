@@ -124,7 +124,23 @@ footer .username {
   border: 1px solid #ffffff;
   padding: 1em;
 }
+/*navbar*/
+.nav-toggle{
+  display:none;
+}
+.nav-toggle:checked ~ul{
+  display:block;
+  height:100vh;
+  text-align: center;
+  margin-top:60%;
+  margin-right:30%;
+  justify-content: space-between;
+  
 
+}
+.nav-toggle:checked ~ ul li{
+  padding-bottom:2em;
+}
 /* Layout */
 .container {
   max-width: 90%;
